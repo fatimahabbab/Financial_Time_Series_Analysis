@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The aim of this project is to analyse and forecast the closing price time series for a given stock using different time series models. We attempt to implement a robust forecasting model that can predict future stock prices accurately.
+This project aims to analyze and forecast the closing prices of a selected stock using various time series models. The primary objective is to develop a robust forecasting model that can predict future stock prices with high accuracy.
 
 ## Tools and Libraries Used
 
@@ -20,15 +20,49 @@ The aim of this project is to analyse and forecast the closing price time series
 
 ### 1. Data Collection and Preprocessing
 
-- **Objective:** Fetch historical stock price data.
-- **Tools:** `yfinance`, `pandas`
-- **Code:**
-  ```python
-  import yfinance as yf
-  import pandas as pd
+- Fetch historical stock price data using `yfinance` and preprocess it for analysis.
 
-  # Fetch historical data
-  stock_data = yf.download('AAPL', start='2010-01-01', end='2023-01-01')
-  # Keep only the closing prices
-  stock_data = stock_data[['Close']]
-  stock_data.to_csv('data/AAPL.csv')
+### 2. Exploratory Data Analysis (EDA)
+
+- Perform visualizations and summary statistics to understand the data.
+
+### 3. Stationarity Testing
+
+- Conduct tests like Augmented Dickey-Fuller (ADF) to check for stationarity and apply differencing if necessary.
+
+### 4. Modeling
+
+- Develop and fit time series models such as ARIMA to the preprocessed data.
+
+### 5. Model Diagnostics
+
+- Evaluate model residuals for autocorrelation and normality using diagnostic plots.
+
+### 6. Forecasting
+
+- Generate out-of-sample forecasts and visualize the results.
+
+### 7. Evaluation
+
+- Assess the accuracy of the forecasts using evaluation metrics like RMSE.
+
+## Conclusion
+
+This project demonstrates the application of time series analysis and forecasting techniques to predict stock prices. The steps outlined above provide a comprehensive approach to building a forecasting model, from data collection to evaluation.
+
+## Future Work
+
+- Experiment with advanced models such as GARCH and LSTM.
+- Apply the methodology to different stocks and financial instruments.
+- Enhance the model by incorporating additional features such as trading volume and macroeconomic indicators.
+
+## References
+
+- [Yahoo Finance](https://finance.yahoo.com/)
+- [statsmodels Documentation](https://www.statsmodels.org/)
+- [scikit-learn Documentation](https://scikit-learn.org/)
+- [matplotlib Documentation](https://matplotlib.org/)
+
+---
+
+Feel free to customize this `README.md` file according to your specific project details and requirements.
